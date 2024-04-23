@@ -1,0 +1,6 @@
+colors:
+- [204, 56, 191]
+names: [flutter_icon]
+nc: 1
+train: ./images/train
+val: ./images/val

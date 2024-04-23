@@ -1,0 +1,39 @@
+name: dash_maze_runner
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.3.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+  provider: ^6.1.2
+  shared_preferences: ^2.2.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/launcher_icons/
+
+  fonts:
+    - family: theren
+      fonts:
+        - asset: assets/fonts/TherenRegular.ttf
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: false
+  image_path: "assets/launcher_icons/android/play_store_512.png"
+  adaptive_icon_background: "assets/launcher_icons/android/res/mipmap-xxxhdpi/ic_launcher_background.png"
+  adaptive_icon_foreground: "assets/launcher_icons/android/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
+  min_sdk_android: 21

@@ -19,14 +19,14 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (_) => GameController(),
-      child: MaterialApp(
-        title: 'Dash Maze Runner',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
+        create: (_) => GameController(),
+        child: MaterialApp(
+          title: 'Dash Maze Runner',
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+          ),
+          home: const HomeScreen(),
         ),
-        home: const HomeScreen(),
-      ),
     );
   }
 }

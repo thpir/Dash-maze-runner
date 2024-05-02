@@ -7,9 +7,14 @@ environment:
   sdk: '>=3.3.3 <4.0.0'
 
 dependencies:
+  camera: ^0.10.5+9
+  confetti: ^0.7.0
+  easy_debounce: ^2.0.3
   flutter:
     sdk: flutter
   flutter_launcher_icons: ^0.13.1
+  flutter_vision: ^1.1.4
+  google_mlkit_text_recognition: ^0.12.1
   provider: ^6.1.2
   shared_preferences: ^2.2.3
 
@@ -23,12 +28,16 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/models/
     - assets/launcher_icons/
 
   fonts:
     - family: theren
       fonts:
         - asset: assets/fonts/TherenRegular.ttf
+    - family: super_boys
+      fonts:
+        - asset: assets/fonts/SuperBoys.ttf
 
 flutter_launcher_icons:
   android: "launcher_icon"

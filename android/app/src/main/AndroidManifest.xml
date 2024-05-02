@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="dash_maze_runner"
+        android:label="Dash maze runner"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity

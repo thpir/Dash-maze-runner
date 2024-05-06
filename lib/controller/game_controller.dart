@@ -29,6 +29,7 @@ class GameController extends ChangeNotifier {
     await _saveDashPosition();
     cvQuestCompleted = false;
     ocrQuestCompleted = false;
+    gameFinished = false;
     await _sharedPrefs.setCvQuestStatus(cvQuestCompleted);
     await _sharedPrefs.setOcrQuestStatus(ocrQuestCompleted);
     detectedWords = [];
@@ -53,12 +54,19 @@ class GameController extends ChangeNotifier {
     for (String word in wordsToDetect) {
       if (detectedWords.contains(word)) {
         words.add(
-          Text(
-            word,
-            style: const TextStyle(
-                fontFamily: 'super_boys',
-                color: buttonBackgroundColor,
-                decoration: TextDecoration.lineThrough),
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                word,
+                style: const TextStyle(
+                    fontFamily: 'super_boys',
+                    color: greenBackground,
+                ),
+              ),
+              const Icon(Icons.check, color: greenBackground, size: 20.0)
+            ],
           ),
         );
       } else {

@@ -17,6 +17,7 @@ dependencies:
   flutter_vision: ^1.1.4
   google_mlkit_text_recognition: ^0.12.1
   provider: ^6.1.2
+  pytorch_lite: ^4.2.5
   shared_preferences: ^2.2.3
 
 dev_dependencies:

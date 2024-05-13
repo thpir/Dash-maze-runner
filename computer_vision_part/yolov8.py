@@ -4,4 +4,4 @@ from ultralytics import YOLO
 model = YOLO('yolov8n.pt')
 
 # Train the model
-results = model.train(data='/Users/thijspirmez/Documents/Prive/Thpir/Dash Maze Runner/computer_vision_part/dataset/data_config.yaml', epochs=300, imgsz=640)
+results = model.train(data='/Users/thijspirmez/Documents/Prive/Thpir/dash_maze_runner/computer_vision_part/dataset/data_config.yaml', epochs=100, imgsz=640)

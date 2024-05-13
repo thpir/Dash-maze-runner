@@ -121,6 +121,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.18.0"
+  computer:
+    dependency: transitive
+    description:
+      name: computer
+      sha256: "34176c612a02ebf3e5eaa3e9b40e2b1df495043c46614999639d19e66823232d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.2.1"
   confetti:
     dependency: "direct main"
     description:
@@ -456,6 +464,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.1.2"
+  pytorch_lite:
+    dependency: "direct main"
+    description:
+      name: pytorch_lite
+      sha256: "1ae09f2a7f50317bab0acf79502e2effb41d235060bffb82b0fcee27926e13b1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.2.5"
   shared_preferences:
     dependency: "direct main"
     description:

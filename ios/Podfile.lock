@@ -47,6 +47,11 @@ PODS:
   - GoogleUtilitiesComponents (1.1.0):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (3.4.0)
+  - LibTorch (1.13.0.1):
+    - LibTorch/Core (= 1.13.0.1)
+  - LibTorch/Core (1.13.0.1):
+    - LibTorch/Torch
+  - LibTorch/Torch (1.13.0.1)
   - MLImage (1.0.0-beta5)
   - MLKitCommon (10.0.0):
     - GoogleDataTransport (~> 9.0)
@@ -78,6 +83,9 @@ PODS:
     - Flutter
     - FlutterMacOS
   - PromisesObjC (2.4.0)
+  - pytorch_lite (0.0.1):
+    - Flutter
+    - LibTorch (~> 1.13.0.1)
   - shared_preferences_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
@@ -90,6 +98,7 @@ DEPENDENCIES:
   - google_mlkit_commons (from `.symlinks/plugins/google_mlkit_commons/ios`)
   - google_mlkit_text_recognition (from `.symlinks/plugins/google_mlkit_text_recognition/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
+  - pytorch_lite (from `.symlinks/plugins/pytorch_lite/ios`)
   - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/darwin`)
 
 SPEC REPOS:
@@ -100,6 +109,7 @@ SPEC REPOS:
     - GoogleUtilities
     - GoogleUtilitiesComponents
     - GTMSessionFetcher
+    - LibTorch
     - MLImage
     - MLKitCommon
     - MLKitTextRecognition
@@ -123,6 +133,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/google_mlkit_text_recognition/ios"
   path_provider_foundation:
     :path: ".symlinks/plugins/path_provider_foundation/darwin"
+  pytorch_lite:
+    :path: ".symlinks/plugins/pytorch_lite/ios"
   shared_preferences_foundation:
     :path: ".symlinks/plugins/shared_preferences_foundation/darwin"
 
@@ -139,6 +151,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: d053d902a8edaa9904e1bd00c37535385b8ed152
   GoogleUtilitiesComponents: 679b2c881db3b615a2777504623df6122dd20afe
   GTMSessionFetcher: ed61055dc13f769533d057edc520a4cb8f41c324
+  LibTorch: 8abfa5fc9d146230b31065a29b0502e1104956ea
   MLImage: 1824212150da33ef225fbd3dc49f184cf611046c
   MLKitCommon: afcd11b6c0735066a0dde8b4bf2331f6197cbca2
   MLKitTextRecognition: 91706574e4db9b48cd2e66cbbcc6b58956156b0a
@@ -147,6 +160,7 @@ SPEC CHECKSUMS:
   nanopb: 438bc412db1928dac798aa6fd75726007be04262
   path_provider_foundation: 3784922295ac71e43754bd15e0653ccfd36a147c
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
+  pytorch_lite: 918b8dcad2cc52b17e24297a2e2b4c05fd921df2
   shared_preferences_foundation: b4c3b4cddf1c21f02770737f147a3f5da9d39695
 
 PODFILE CHECKSUM: 819463e6a0290f5a72f145ba7cde16e8b6ef0796

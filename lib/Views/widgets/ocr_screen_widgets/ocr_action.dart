@@ -11,39 +11,42 @@ class OcrAction extends StatelessWidget {
   Widget build(BuildContext context) {
     final ocrHelper = Provider.of<OcrHelper>(context);
     final gameController = Provider.of<GameController>(context);
-    return Container(
-      padding: const EdgeInsets.all(8),
-      height: kBottomNavigationBarHeight,
-      width: double.infinity,
-      color: Colors.transparent,
-      child: Center(
-        child: ElevatedButton(
-          onPressed: () async {
-            List<String> result =
-                await ocrHelper.takeSnapshotForTextRecognition();
-            for (String text in result) {
-              for (String wordToFind in gameController.wordsToDetect) {
-                if (!gameController.detectedWords.contains(wordToFind)) {
-                  if (text.toLowerCase().contains(wordToFind)) {
-                    gameController.detectedWords.add(wordToFind);
+    return SafeArea(
+      bottom: true,
+      child: Container(
+        padding: const EdgeInsets.all(8),
+        height: kBottomNavigationBarHeight,
+        width: double.infinity,
+        color: Colors.transparent,
+        child: Center(
+          child: ElevatedButton(
+            onPressed: () async {
+              List<String> result =
+                  await ocrHelper.takeSnapshotForTextRecognition();
+              for (String text in result) {
+                for (String wordToFind in gameController.wordsToDetect) {
+                  if (!gameController.detectedWords.contains(wordToFind)) {
+                    if (text.toLowerCase().contains(wordToFind)) {
+                      gameController.detectedWords.add(wordToFind);
+                    }
                   }
                 }
               }
-            }
-            if (gameController.detectedWords.length ==
-                gameController.wordsToDetect.length) {
-              gameController.completeOcrQuest();
-            }
-            if (context.mounted) Navigator.of(context).pop();
-          },
-          style: ElevatedButton.styleFrom(
-              foregroundColor: buttonTextColor,
-              backgroundColor: buttonBackgroundColor,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20))),
-          child: const Text(
-            "Scan text",
-            style: TextStyle(fontFamily: "theren"),
+              if (gameController.detectedWords.length ==
+                  gameController.wordsToDetect.length) {
+                gameController.completeOcrQuest();
+              }
+              if (context.mounted) Navigator.of(context).pop();
+            },
+            style: ElevatedButton.styleFrom(
+                foregroundColor: buttonTextColor,
+                backgroundColor: buttonBackgroundColor,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20))),
+            child: const Text(
+              "Scan text",
+              style: TextStyle(fontFamily: "theren"),
+            ),
           ),
         ),
       ),

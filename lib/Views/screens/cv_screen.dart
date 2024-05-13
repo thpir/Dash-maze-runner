@@ -2,7 +2,8 @@ import 'package:dash_maze_runner/Views/widgets/cv_screen_widgets/detection_actio
 import 'package:dash_maze_runner/Views/widgets/cv_screen_widgets/detection_appbar.dart';
 import 'package:dash_maze_runner/Views/widgets/cv_screen_widgets/detection_view.dart';
 import 'package:dash_maze_runner/Views/widgets/home_screen_widgets/background.dart';
-import 'package:dash_maze_runner/controller/vision_helper.dart';
+//import 'package:dash_maze_runner/controller/flutter_vision_helper.dart';
+import 'package:dash_maze_runner/controller/pytorch_lite_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -17,9 +18,12 @@ class _CvScreenState extends State<CvScreen> {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (_) => VisionHelper(),
-      builder: (context, child) {
-        return const Scaffold(
+        /* Uncomment if you are using the FlutterVisionHelper */
+        //create: (_) => FlutterVisionHelper(),
+        /* Uncomment if you are using the PytorchLiteHelper */
+        create: (_) => PytorchLiteHelper(),
+        builder: (context, child) {
+          return const Scaffold(
             appBar: DetectionAppbar(),
             body: Stack(
               children: [
@@ -27,11 +31,11 @@ class _CvScreenState extends State<CvScreen> {
                 DetectionView(),
                 Align(
                   alignment: Alignment.bottomCenter,
-                  child: DetectionAction(),)
+                  child: DetectionAction(),
+                )
               ],
             ),
           );
-      }
-    );
+        });
   }
 }

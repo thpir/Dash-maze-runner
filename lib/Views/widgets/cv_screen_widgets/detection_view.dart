@@ -48,42 +48,6 @@ class _DetectionViewState extends State<DetectionView> {
     visionHelper.closeVision();
   }
 
-  /* Uncomment if you are using the FlutterVisionHelper */
-  // List<Widget> displayBoxesAroundRecognizedObjects(Size screen) {
-  //   final controller = Provider.of<FlutterVisionHelper>(context, listen: false);
-  //   if (controller.yoloResults.isEmpty) return [];
-  //   // First, we need to aquire the image width and height. This is not
-  //   // necessarily width and height of the shown image. If we are in portrait
-  //   // mode, the width and height of the image will be swapped.
-  //   var imageWidth = controller.cameraImage?.width ?? 1;
-  //   var imageHeight = controller.cameraImage?.height ?? 1;
-
-  //   // Next, we need to calculate the factor by which we need to multiply the
-  //   // bounding box coordinates to get the correct position on the screen.
-  //   var factorX = screen.width / imageHeight;
-  //   var factorY = (screen.width *
-  //           controller.cameraHelper.cameraController.value.aspectRatio) /
-  //       imageWidth;
-
-  //   // Now we can create the bounding boxes.
-  //   var boundingBoxes = <Widget>[];
-  //   for (var result in controller.yoloResults) {
-  //     boundingBoxes.add(Positioned(
-  //       left: result["box"][0] * factorX,
-  //       top: result["box"][1] * factorY,
-  //       width: (result["box"][2] - result["box"][0]) * factorX,
-  //       height: (result["box"][3] - result["box"][1]) * factorY,
-  //       child: Container(
-  //           decoration: BoxDecoration(
-  //             border: Border.all(color: buttonBackgroundColor, width: 2.0),
-  //           ),
-  //           child: null),
-  //     ));
-  //   }
-  //   return boundingBoxes;
-  // }
-
-  /* Uncomment if you are using the PytorchLiteHelper */
   List<Widget> displayBoxesAroundRecognizedObjects(Size screen) {
     /* Uncomment if you are using the FlutterVisionHelper */
     // final visionHelper =

@@ -45,7 +45,7 @@ class _DetectionViewState extends State<DetectionView> {
     //     Provider.of<FlutterVisionHelper>(context, listen: false);
     /* Uncomment if you are using the PytorchLiteHelper */
     final visionHelper = Provider.of<PytorchLiteHelper>(context, listen: false);
-    await visionHelper.closeVision();
+    visionHelper.closeVision();
   }
 
   /* Uncomment if you are using the FlutterVisionHelper */

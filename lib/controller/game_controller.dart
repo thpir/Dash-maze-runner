@@ -1,4 +1,4 @@
-import 'package:dash_maze_runner/Views/widgets/home_screen_widgets/quest_sheets.dart';
+import 'package:dash_maze_runner/views/widgets/home_screen_widgets/quest_sheets.dart';
 import 'package:dash_maze_runner/data/mazes.dart';
 import 'package:dash_maze_runner/globals.dart';
 import 'package:dash_maze_runner/storage/shared_prefs.dart';

@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:dash_maze_runner/Views/screens/home_screen.dart';
+import 'package:dash_maze_runner/views/screens/home_screen.dart';
 import 'package:dash_maze_runner/controller/game_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

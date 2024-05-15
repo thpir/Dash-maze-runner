@@ -1,5 +1,5 @@
-import 'package:dash_maze_runner/Views/screens/cv_screen.dart';
-import 'package:dash_maze_runner/Views/screens/ocr_screen.dart';
+import 'package:dash_maze_runner/views/screens/cv_screen.dart';
+import 'package:dash_maze_runner/views/screens/ocr_screen.dart';
 import 'package:dash_maze_runner/globals.dart';
 import 'package:flutter/material.dart';
 

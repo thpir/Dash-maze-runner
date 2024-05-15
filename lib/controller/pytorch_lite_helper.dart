@@ -64,25 +64,26 @@ class PytorchLiteHelper extends ChangeNotifier {
 
   /// Method to apply yolo on every frame of a camerastream.
   /// The result is mapped in yoloResults.
-  Future<void> yoloOnFrame(CameraImage cameraImage) async {
-    _isBusy = true;
-    final result = await objectModel.getCameraImagePrediction(cameraImage, 0,
-        minimumScore: 0.1, iOUThreshold: 0.1);
-    yoloResults = result;
-    if (result.isNotEmpty) {
-      _objectDetected = true;
-    } else {
-      _objectDetected = false;
-    } 
-    _isBusy = false;
-    notifyListeners();
+  Future<void> yoloOnFrame(CameraImage cameraImage) async {   
+      _isBusy = true;
+      final result = await objectModel.getCameraImagePrediction(cameraImage, 0,
+          minimumScore: 0.1, iOUThreshold: 0.1);
+      yoloResults = result;
+      if (result.isNotEmpty) {
+        _objectDetected = true;
+      } else {
+        _objectDetected = false;
+      }
+      _isBusy = false;
+      if (_isDetecting) {
+        notifyListeners();
+      } 
   }
 
   /// Close the camera with the help of the CameraHelper class
-  Future<void> closeVision() async {
+  void closeVision() {
     _isLoaded = false;
     _isDetecting = false;
-    await cameraHelper.cameraController.stopImageStream();
-    await cameraHelper.closeCamera();
+    cameraHelper.closeCamera();
   }
 }

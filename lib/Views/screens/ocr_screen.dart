@@ -1,8 +1,8 @@
-import 'package:dash_maze_runner/Views/widgets/home_screen_widgets/background.dart';
-import 'package:dash_maze_runner/Views/widgets/ocr_screen_widgets/ocr_action.dart';
-import 'package:dash_maze_runner/Views/widgets/ocr_screen_widgets/ocr_appbar.dart';
-import 'package:dash_maze_runner/Views/widgets/ocr_screen_widgets/ocr_view.dart';
-import 'package:dash_maze_runner/Views/widgets/ocr_screen_widgets/waiting_view.dart';
+import 'package:dash_maze_runner/views/widgets/home_screen_widgets/background.dart';
+import 'package:dash_maze_runner/views/widgets/ocr_screen_widgets/ocr_action.dart';
+import 'package:dash_maze_runner/views/widgets/ocr_screen_widgets/ocr_appbar.dart';
+import 'package:dash_maze_runner/views/widgets/ocr_screen_widgets/ocr_view.dart';
+import 'package:dash_maze_runner/views/widgets/ocr_screen_widgets/waiting_view.dart';
 import 'package:dash_maze_runner/controller/ocr_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

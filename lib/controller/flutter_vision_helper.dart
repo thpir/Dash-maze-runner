@@ -78,13 +78,17 @@ class FlutterVisionHelper extends ChangeNotifier {
     if (result.isNotEmpty) {
       yoloResults = result;
       _objectDetected = true;
-      notifyListeners();
+      if (_isDetecting) {
+        notifyListeners();
+      }
     } else {
       EasyThrottle.throttle('clear-screen', const Duration(milliseconds: 2000),
           () {
         yoloResults.clear();
         _objectDetected = false;
-        notifyListeners();
+        if (_isDetecting) {
+          notifyListeners();
+        }
       });
     }
   }
@@ -94,8 +98,7 @@ class FlutterVisionHelper extends ChangeNotifier {
     _isLoaded = false;
     _isDetecting = false;
     EasyThrottle.cancel('clear-screen');
-    await cameraHelper.cameraController.stopImageStream();
     flutterVision.closeYoloModel();
-    await cameraHelper.closeCamera();
+    cameraHelper.closeCamera();
   }
 }

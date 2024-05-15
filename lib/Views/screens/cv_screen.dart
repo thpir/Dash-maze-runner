@@ -1,7 +1,7 @@
-import 'package:dash_maze_runner/Views/widgets/cv_screen_widgets/detection_action.dart';
-import 'package:dash_maze_runner/Views/widgets/cv_screen_widgets/detection_appbar.dart';
-import 'package:dash_maze_runner/Views/widgets/cv_screen_widgets/detection_view.dart';
-import 'package:dash_maze_runner/Views/widgets/home_screen_widgets/background.dart';
+import 'package:dash_maze_runner/views/widgets/cv_screen_widgets/detection_action.dart';
+import 'package:dash_maze_runner/views/widgets/cv_screen_widgets/detection_appbar.dart';
+import 'package:dash_maze_runner/views/widgets/cv_screen_widgets/detection_view.dart';
+import 'package:dash_maze_runner/views/widgets/home_screen_widgets/background.dart';
 //import 'package:dash_maze_runner/controller/flutter_vision_helper.dart';
 import 'package:dash_maze_runner/controller/pytorch_lite_helper.dart';
 import 'package:flutter/material.dart';
